@@ -90,13 +90,7 @@ We follow  the three stage recommender system (funnel architecture) in order to 
 graph TD;
   CandidateGeneration-->Ranking-->Re-ranking;
 ```
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+
 
 In the first stage, we use a light model to retrive thousands of items from millions
 In the second (ranking) stage, we focus on high precision using a powerful model. This will not impact serving speed much because it's only run on smaller subset of items. 
