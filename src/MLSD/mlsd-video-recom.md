@@ -87,7 +87,15 @@ We choose a sequential hybrid model (standard e.g. for video recommendation)
 We follow  the three stage recommender system (funnel architecture) in order to meet latency requirements and eb able to scale the system to billions of items. 
 
 ```mermaid
-   Candidate generation --> Ranking --> Re-ranking
+graph TD;
+  CandidateGeneration-->Ranking-->Re-ranking;
+```
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
 
 In the first stage, we use a light model to retrive thousands of items from millions
